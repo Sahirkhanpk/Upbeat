@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "741614596088",
+    "project_id": "upbeat-fe59c",
+    "storage_bucket": "upbeat-fe59c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741614596088:android:8695761e706f0e4444b00d",
+        "android_client_info": {
+          "package_name": "com.example.upbeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741614596088-erfcojg8i04ogutcqskih00o8grk8hdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoGAOaM-UtM9o7bYlVCqvUm716_L8DOoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741614596088-erfcojg8i04ogutcqskih00o8grk8hdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

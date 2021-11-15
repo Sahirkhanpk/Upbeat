@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Upbeat</string>
+    <string name="oops_no_internet">Oops! No internet connection</string>
+    <string name="something_went_wrong">Something went wrong</string>
+
+    <string name="invalid_credentials">invalid credentials</string>
+    <string name="please_enter_email_address">please enter email address</string>
+
+    <string name="please_enter_valid_email_address">please enter valid email address</string>
+
+    <string name="please_enter_password">please enter password</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="alert_log_out">Are you sure you want to logout?</string>
+    please_enter_password
+
+
+</resources>

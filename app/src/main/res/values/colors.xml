@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0E66B9</color>
+
+    <!-- <color name="colorPrimarylight">#48A4DB</color>-->
+    <color name="colorPrimarylight">#48A4DB</color>
+
+
+    <color name="darkblue">#07344F</color>
+
+    <color name="colorPrimaryDark">#0E66B9</color>
+
+    <color name="colorlightSkyBlueGray">#EAF2F8</color>
+    <color name="colorAccent">#0D679E</color>
+    <!--   <color name="splash_bg">#FCB040</color>-->
+    <color name="splash_bg">#0D679E</color>
+
+    <!-- App Theme Color-->
+    <!-- <color name="colorTheme">#C3262F</color>-->
+    <color name="colorTheme">#0D679E </color>
+    <color name="background_color">#f5f5f5</color>
+    <color name="background_grey">#eee</color>
+
+    <!-- Toolbar Color-->
+    <!-- <color name="toolbar_bg">#C3262F</color>-->
+    <color name="toolbar_bg">#0E66B9</color>
+    <color name="toolbar_title">#FFF</color>
+
+
+    <color name="yellow_off_white">#f5f2d0</color>
+
+
+    <color name="colorPrimaryBlueText">#0E66B9</color>
+    <color name="colorPrimaryBlueTexttwo">#0066B9</color>
+
+    <color name="colorPrimaryshade">#EEF2F5</color>
+
+    <color name="colorPrimaryGreen">#02AA31</color>
+
+    <color name="jangleGreen">#2AAA8A</color>
+
+    <!-- Text-->
+    <color name="colorPrimaryText">#0D1D3E</color>
+    <color name="colorPrimaryTexttwo">#444444</color>
+    <color name="colorSecondaryText">#747474</color>
+    <color name="light_grey">#E2E2E2</color>
+    <color name="very_light_grey">#fafafa</color>
+    <color name="very_light_grey_two">#F3F3F3</color>
+    <color name="medium_grey">#d1d0d0</color>
+    <color name="colorTextWhite">#FFF</color>
+    <color name="colorTextBlack">#212121</color>
+    <color name="md_white_1000">#ffffff</color>
+    <color name="md_grey_300">#E0E0E0</color>
+    <!-- Color-->
+    <color name="colorTransparent">#00ff6d00</color>
+    <color name="grey">#888888</color>
+    <color name="colorGreen">#29AB87</color>
+
+    <color name="colorRed">#FCB040</color>
+    <color name="colorBlue">#3b8771</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorYellow">#ffeb3b</color>
+    <color name="colorPurple">#D1C4E9</color>
+    <color name="colorRedPure">#FF0000</color>
+
+
+
+
+    <color name="colorone">#0E66B9</color>
+    <color name="colortwo">#444444</color>
+    <color name="colorthree">#02AA31</color>
+    <color name="colorfour">#0D1D3E</color>
+    <color name="colorfive">#2C3451</color>
+    <color name="colorsic">#E2E2E2</color>
+
+
+    <!-- BottomSheet Color-->
+    <color name="bottomSheetInActiveColor">#747474</color>
+    <color name="bottomSheetInAccentColor">#F48034</color>
+
+</resources>

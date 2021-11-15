@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activities.MainActivity"
+    android:background="@color/colorWhite">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:titleTextColor="@color/colorWhite"
+
+
+
+
+
+        >
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_back_foreground" />
+
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <!-- <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="excel ⦿ labs"
+             android:textColor="@color/colorWhite"
+
+             android:id="@+id/toolbar_title"
+             android:textSize="@dimen/_17sdp"
+             android:fontFamily="@font/trebuchet_ms"/>-->
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+
+            android:fontFamily="@font/poppins_bold"
+
+            android:text="U "
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/_23sdp" />
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:fontFamily="@font/poppins_bold"
+
+            android:text="⦿"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/_9sdp"
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+
+            android:text=" Shop"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_23sdp" />
+    </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/search_layout"
+     >
+
+
+        <ImageView
+            android:id="@+id/filter"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+android:layout_gravity="center"
+
+            android:src="@drawable/ic_filter_foreground" />
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/idSearchView"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_35sdp"
+
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/rounded_gary_stoke"
+
+
+android:layout_gravity="center"
+
+
+            app:iconifiedByDefault="false"
+
+            app:queryHint="Search for any thing"
+
+
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/light_grey"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+android:layout_below="@+id/search_layout"
+        android:id="@+id/view_personal_info"
+      android:layout_marginTop="@dimen/_20sdp"  />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_personal_info"
+        android:backgroundTint="@color/light_grey"
+        android:background="@color/colorSecondaryText">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_categries_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="@dimen/_20sdp"
+
+     />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:orientation="vertical"
+          android:layout_alignParentEnd="true">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+        >
+
+                <TextView
+
+                    android:id="@+id/category_txt"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+           android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="Home  Garden"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_11sdp" />
+
+                <ImageView
+                    android:id="@+id/filter_cat"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/ic_filter_foreground"
+              />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/test_orders_rv"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+
+          android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+
+               />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
