@@ -98,7 +98,7 @@ public class sub_categries_adapter extends RecyclerView.Adapter<adapters.sub_cat
 //        holder.noAddOns.setVisibility(View.VISIBLE);
         holder.category_name.setText(object.getName());
 
-        if(object.getImage()!=null)
+       /* if(object.getImage()!=null)
             Glide.with(context)
                     .load(object.getImage())
                     .apply(new RequestOptions()
@@ -106,7 +106,15 @@ public class sub_categries_adapter extends RecyclerView.Adapter<adapters.sub_cat
                             .skipMemoryCache(false)
                             .placeholder(R.drawable.man)
                             .error(R.drawable.man))
-                    .into(holder.icon_category);
+                    .into(holder.icon_category);*/
+
+        if (object.getImage() != null)
+            Glide.with(context).load(object.getImage())
+                    .apply(new RequestOptions()
+                            .centerCrop().
+                                    placeholder(R.drawable.man)
+                            .error(R.drawable.man).dontAnimate()).
+                    into(holder.icon_category);
 
 
 

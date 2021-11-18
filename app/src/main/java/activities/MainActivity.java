@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements all_categries_ada
     RecyclerView all_categries_rv;
     all_categries_adapter All_categries_adapter;
     sub_categries_adapter Sub_categries_adapter;
-    String sub_cat_filter="";
+    String sub_cat_filter="Home &amp; Garden";
     List<Categories_Datum> list;
 
     ApiInterface apiInterface = ApiClient.getRetrofit().create(ApiInterface.class);

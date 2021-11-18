@@ -171,12 +171,9 @@ android:layout_alignParentEnd="true"
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/filter_items_rv"
-        android:layout_width="@dimen/_200sdp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
+android:layout_marginEnd="@dimen/_10sdp"
 android:layout_below="@+id/toolbar"
        android:visibility="gone" />
 </RelativeLayout>
