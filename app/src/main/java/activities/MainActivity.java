@@ -26,24 +26,35 @@ import adapters.all_categries_adapter;
 import adapters.sub_categries_adapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import controller.GetProfile;
+import controller.ProfileListener;
 import helper.GlobalData;
 import models.Categories_Datum;
 import models.Categories_response;
+import models.Profile;
 import models.Subcategory;
+import network.ApiClient;
+import network.ApiInterface;
 
-public class MainActivity extends AppCompatActivity implements all_categries_adapter.ProductAdapterListener,sub_categries_adapter.CategoryAdapterListener {
+public class MainActivity extends AppCompatActivity implements all_categries_adapter.ProductAdapterListener,sub_categries_adapter.CategoryAdapterListener, ProfileListener {
 
     @BindView(R.id.all_categries_rv)
     RecyclerView all_categries_rv;
     all_categries_adapter All_categries_adapter;
     sub_categries_adapter Sub_categries_adapter;
+    String sub_cat_filter="";
+    List<Categories_Datum> list;
 
-
+    ApiInterface apiInterface = ApiClient.getRetrofit().create(ApiInterface.class);
     @BindView(R.id.idSearchView)
     SearchView searchView;
 
     @BindView(R.id.filter_cat)
     ImageView filter_cat;
+
+    @BindView(R.id.filter)
+    ImageView filter;
+
 
 
     @BindView(R.id.test_orders_rv)
@@ -66,6 +77,7 @@ int searched=0;
         ButterKnife.bind(this);
         subcategories = new ArrayList<>();
         subcategoriesList=new ArrayList<>();
+        list= new ArrayList<>();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -81,12 +93,29 @@ int searched=0;
                 return false;
             }
         });
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FilterActivity.class));
+                // finish();
 
+            }
+        });
+        filter_cat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FilterActivity.class));
+                Intent i = new Intent(MainActivity.this, FilterActivity.class);
+                i.putExtra("key",sub_cat_filter);
+                startActivity(i);
+               // finish();
 
+            }
+        });
 
         if(GlobalData.categories_response.getData()!=null&&GlobalData.categories_response.getData().size()>0) {
-
-    All_categries_adapter = new all_categries_adapter(MainActivity.this, GlobalData.categories_response.getData());
+list=GlobalData.categories_response.getData();
+    All_categries_adapter = new all_categries_adapter(MainActivity.this, list);
     all_categries_rv.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false));
     all_categries_rv.setHasFixedSize(true);
     All_categries_adapter.setProductAdapterListener(this);
@@ -120,6 +149,7 @@ int searched=0;
                 categories_datum.setSubcategories(list);
                 categories_datum.setName(category_txt.getText().toString());
                 subcategoriesList.add(categories_datum);
+                sub_cat_filter=catName;
             subCatcheck=1;
             subcategories.clear();
             subcategories.addAll(list);
@@ -239,5 +269,34 @@ int searched=0;
 
 
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new GetProfile(apiInterface, MainActivity.this);
+
+    }
+
+    @Override
+    public void onSuccess(Profile profile) {
+
+    }
+
+    @Override
+    public void onSuccess(Categories_response profile) {
+        if(profile.getData()!=null)
+        {
+            list=null;
+            list=profile.getData();
+            All_categries_adapter.notifyDataSetChanged();
+        }
+
+
+    }
+
+    @Override
+    public void onFailure(String error) {
+
     }
 }

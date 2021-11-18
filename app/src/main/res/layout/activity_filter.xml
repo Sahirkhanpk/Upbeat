@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activities.FilterActivity"
+   >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:titleTextColor="@color/colorWhite"
+
+
+
+
+
+        >
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+android:background="@drawable/ic_filter_close_foreground"
+            android:layout_marginEnd="@dimen/_5sdp"
+          />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/_15sdp" >
+
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="excel ⦿ labs"
+                 android:textColor="@color/colorWhite"
+
+                 android:id="@+id/toolbar_title"
+                 android:textSize="@dimen/_17sdp"
+                 android:fontFamily="@font/trebuchet_ms"/>-->
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+android:layout_alignParentStart="true"
+
+
+
+                android:text="Filters "
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_large"/>
+
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:gravity="center"
+
+android:layout_alignParentEnd="true"
+                android:text="Reset"
+android:id="@+id/txt_reset"
+                android:textColor="@color/colorPrimarylight"
+                android:textSize="@dimen/text_large" />
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/layout_attributes"
+        android:backgroundTint="@color/light_grey"
+        android:id="@+id/layout_filters"
+        android:background="@color/colorSecondaryText"
+       >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_category_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+         >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/_40sdp"
+       android:layout_above="@+id/layout_add"
+       android:orientation="horizontal"
+       android:id="@+id/layout_attributes"
+      >
+       <RelativeLayout
+
+        android:layout_width="match_parent"
+           android:layout_height="@dimen/_40sdp"
+     >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attributes"
+            android:textColor="@color/colorPrimaryText"
+android:layout_marginStart="@dimen/_10sdp"
+         android:layout_centerVertical="true"
+            android:textSize="@dimen/text_medium"/>
+
+        <ImageView
+            android:id="@+id/icon_attibutes"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_40sdp"
+android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_filter_open_foreground" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/attributes_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+       android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+
+        android:id="@+id/layout_add"
+
+
+
+        android:background="@color/colorPrimarylight"
+        android:layout_marginTop="@dimen/_5sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textColor="@color/colorWhite"
+
+            android:textSize="@dimen/text_large"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filter_items_rv"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+android:layout_below="@+id/toolbar"
+       android:visibility="gone" />
+</RelativeLayout>

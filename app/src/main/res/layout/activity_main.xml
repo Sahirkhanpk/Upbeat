@@ -20,8 +20,8 @@
         >
         <ImageView
             android:id="@+id/icon"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
 
             android:layout_marginEnd="@dimen/_5sdp"
             android:src="@drawable/ic_back_foreground" />

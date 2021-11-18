@@ -7,6 +7,7 @@ import models.Profile;
 import models.ProfileNew;
 
 import java.io.File;
+import java.util.List;
 
 
 public class GlobalData {
@@ -41,6 +42,8 @@ public class GlobalData {
     public static int NOTIFICATION_COUNT= 0;
     public static int Totalpoints= 0;
 
+    public static List<Integer> catlist = null;
+    public static List<Integer> Attributeslist = null;
  /*   public static List<TestName> test_order_list;
     public static List<getDoctersDatum> Docter_data ;
     public static List<getBranchesDatum> Branches_data = null;
